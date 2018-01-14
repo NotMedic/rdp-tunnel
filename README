@@ -1,6 +1,6 @@
-rdp2tcp lets you tunnel TCP traffic over an RDP Virtual Channel.  It includes port forwards, reverse port forwards, and a redimentary SOCKS5 proxy.  It does this by redirecting a local named pipe to the terminal services client. 
+--Tim / 12/2017
 
-I got tired of having to compile the tool, so this is pre-compiled using rdesktop 1.8.3
+rdp2tcp lets you tunnel TCP traffic over an RDP Virtual Channel.  It includes port forwards, reverse port forwards, and a redimentary SOCKS5 proxy.  It does this by redirecting a local named pipe to the terminal services client. 
 
 To run it, launch the included rdesktop client with:
 	./rdesktop -r addin:rdp2tcp:./rdp2tcp <ipaddress>

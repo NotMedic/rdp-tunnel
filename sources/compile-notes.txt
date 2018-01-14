@@ -1,0 +1,33 @@
+1.	apt-get install libx11-dev libssl1.0-dev
+2.	svn co https://rdp2tcp.svn.sourceforge.net/svnroot/rdp2tcp/trunk/rdp2tcp rdp2tcp
+3.	cd rdp2tcp
+4.	cd client
+5.	make
+6.	cp rdp2tcp /usr/local/sbin/rdp2tcp
+7.	cd ../../tools
+8.	sudo cp rdp2tcp.py /usr/local/sbin/
+
+9.	Download rdesktop 1.8.3 https://github.com/rdesktop/rdesktop/releases
+
+10.	Download the OOP Patch: https://sourceforge.net/p/rdesktop/patches/107/?page=2
+https://sourceforge.net/p/rdesktop/patches/_discuss/thread/066465c7/1ace/attachment/oop-1.8.1.patch
+
+11. Patch rdesktop source: patch -p1 < oop.patch
+
+12. Bootstrap the config with ./bootstrap
+		Apt-get install build-essential
+		apt-get install gcc make autoconf automake
+	
+13. ./configure –disable-smartcard
+	make
+	https://github.com/rdesktop/rdesktop/issues/138
+
+	apt-get install libssl1.0-dev
+	make clean
+	make
+
+Edit server/Makefile.mingw32:
+	CC=i686-w64-mingw32-gcc
+make server-mingw32
+
+
