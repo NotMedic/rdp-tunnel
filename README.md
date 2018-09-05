@@ -9,7 +9,8 @@ You should see:
 	controller listening on 127.0.0.1:8477
 	virtual channel disconnected
 
-Upload rdp2tcp.exe to the Terminal Server. if this isn't possible, you can try to use rdpupload. This will use sendkeys() to the active window (which should be rdesktop) to generate a vbscript file that'll write the EXE to disk.  Start notepad on the Terminal Server, then run this on the client:
+Upload rdp2tcp.exe to the Terminal Server. try copy/pasting the binary into a local wordpad document, opening wordpad on the terminal server, then copy/pasting the OLE object.  This has a fairly high success rate. 
+if this isn't possible, you can try to use rdpupload. This will use sendkeys() to the active window (which should be rdesktop) to generate a vbscript file that'll write the EXE to disk.  Start notepad on the Terminal Server, then run this on the client:
 	./rdpupload -x -f vb rdp2tcp.exe - | xte
 Then give the rdesktop window focus.  This takes FOREVER.
 
